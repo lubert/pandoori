@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Pandoori",
+  "description": "This extension converts Pandora stations to Rdio stations.",
+  "version": "1.0",
+  "permissions": [
+    "identity",
+    "tabs",
+    "http://*.rdio.com/",
+    "https://*.rdio.com/",
+    "http://*.pandora.com/",
+    "https://*.pandora.com/"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}
