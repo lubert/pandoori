@@ -42,6 +42,9 @@ function signinRdio() {
       var match = re.exec(url);
       if (match.length >= 2) {
         accessToken = match[1];
+        $("#signin").hide();
+        $("#convert").show();
+        $("#artists").show();
         console.log("token: " + accessToken);
       } else {
         console.log("Error: " + url);
@@ -105,6 +108,8 @@ function addArtistStationToFavorites(stationKey) {
  * Parse page only if Pandora Stations list
  */
 $(function() {
+  $("#convert").hide();
+  $("#artists").hide();
   $("#signin").click(function() {
     signinRdio();
   });
@@ -124,6 +129,8 @@ $(function() {
     } else {
       var $artists = $("#artists");
       $artists.text("Go to pandora.com/profile/stations/");
+      $artists.show();
+      $("#signin").hide();
     }
   });
 });
